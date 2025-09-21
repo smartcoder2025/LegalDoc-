@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document Simplifier - AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-gavel"></i>
+                    <h1>Legal Document Simplifier</h1>
+                </div>
+                <div class="header-controls">
+                    <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="clear-chat" class="clear-chat" title="Clear chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Container -->
+        <main class="chat-container">
+            <!-- Welcome Message -->
+            <div class="welcome-message" id="welcome-message">
+                <div class="welcome-content">
+                    <i class="fas fa-scale-balanced"></i>
+                    <h2>Welcome to Legal Document Simplifier</h2>
+                    <p>Paste a legal document or section below, and I'll rewrite it in plain, easy-to-understand language for non-lawyers.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-file-text"></i>
+                            <span>Paste legal documents</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-language"></i>
+                            <span>Get clear, simple explanations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Accurate and professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be dynamically added here -->
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea
+                    id="message-input"
+                    placeholder="Type or paste legal text..."
+                    rows="2"
+                    maxlength="10000"
+                ></textarea>
+                    <label class="file-upload-btn" title="Upload files or images" style="position: relative; display: inline-block; overflow: hidden;">
+                        <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx,.txt,.ppt,.pptx,.xls,.xlsx"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;" />
+                        <i class="fas fa-paperclip"></i>
+                    </label>
+                    <button id="send-button" class="send-button" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+            </div>
+            <div class="input-footer">
+                <span class="char-counter" id="char-counter">0/10000</span>
+                <span class="disclaimer">
+                    <i class="fas fa-info-circle"></i>
+                    This tool simplifies legal text only. Consult a qualified attorney for legal advice.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\Ashish\Desktop\My Projects\cursor ai\legalbot\index.html
